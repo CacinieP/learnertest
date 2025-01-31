@@ -2,6 +2,9 @@ let answers = [];
 
 function recordAnswer(questionIndex, answer) {
   answers[questionIndex] = answer;
+  if (answers.length === 20) {
+    document.getElementById('submit').style.display = 'block';  // 显示提交按钮
+  }
 }
 
 function showResult() {
