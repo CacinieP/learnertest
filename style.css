@@ -1,37 +1,40 @@
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f4f4f9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
   margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  background: #f2f2f2;
 }
 
-.container {
-  background: white;
-  padding: 20px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  width: 80%;
-  max-width: 600px;
-}
-
-h1 {
+.screen {
+  display: none; /* 所有界面默认隐藏，使用 .active 时显示 */
   text-align: center;
+  margin-top: 50px;
 }
 
-.question {
+.active {
+  display: block;
+}
+
+h1, h2 {
   margin-bottom: 20px;
 }
 
+#options-container {
+  display: inline-block;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.option {
+  margin: 10px 0;
+}
+
 button {
+  padding: 10px 20px;
+  cursor: pointer;
   background-color: #4CAF50;
   color: white;
   border: none;
-  padding: 10px 20px;
-  margin: 5px;
-  cursor: pointer;
   border-radius: 5px;
 }
 
@@ -39,16 +42,9 @@ button:hover {
   background-color: #45a049;
 }
 
-#submit {
-  width: 100%;
-  background-color: #2196F3;
-}
-
-#submit:hover {
-  background-color: #0b7dda;
-}
-
-#result {
-  margin-top: 20px;
-  text-align: center;
+#result-text {
+  margin: 20px auto;
+  line-height: 1.8;
+  max-width: 600px;
+  text-align: left;
 }
